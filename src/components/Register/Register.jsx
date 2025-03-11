@@ -4,7 +4,7 @@ const Register = () => {
   return (
     <div className="max-w-lg mx-auto">
       <h2 className="text-4xl my-8">Register</h2>
-      <form className="flex flex-col justify-center">
+      <form className="flex flex-col">
         <label className="input validator my-6">
           <svg
             className="h-[1em] opacity-50"
