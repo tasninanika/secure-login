@@ -2,10 +2,10 @@ import React from "react";
 
 const Register = () => {
   return (
-    <div>
+    <div className="max-w-lg mx-auto">
       <h2 className="text-4xl my-8">Register</h2>
-      <form className="grid grid-cols-1">
-        <label className="input validator">
+      <form className="flex flex-col justify-center">
+        <label className="input validator my-6">
           <svg
             className="h-[1em] opacity-50"
             xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,9 @@ const Register = () => {
           <br />
           At least one uppercase letter
         </p>
-        <button className="btn">Default</button>
+        <button type="submit" className="btn w-80 my-6">
+          Button
+        </button>
       </form>
     </div>
   );
