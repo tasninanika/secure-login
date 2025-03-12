@@ -1,11 +1,12 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { auth } from "../../firebase.init";
 import { Link } from "react-router-dom";
 
 const Login = () => {
   const [success, setSuccess] = useState(false);
   const [loginError, setLoginError] = useState("");
+  const emailRef = useRef();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -61,6 +62,7 @@ const Login = () => {
                   type="email"
                   name="email"
                   className="input"
+                  ref={emailRef}
                   placeholder="Email"
                 />
                 <label className="fieldset-label">Password</label>
