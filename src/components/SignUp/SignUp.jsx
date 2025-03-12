@@ -6,6 +6,8 @@ import { auth } from "../../firebase.init";
 const SignUp = () => {
   const [success, setSuccess] = useState(false);
   const [errorMessage, setError] = useState("");
+  const [showPass, setShowPass] = useState(false);
+
   const handleSignUp = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
