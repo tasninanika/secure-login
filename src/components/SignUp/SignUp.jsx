@@ -11,6 +11,9 @@ const SignUp = () => {
     console.log(email);
     console.log(password);
 
+    // reset error and status
+    steError("");
+
     // create user with email and pass
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
