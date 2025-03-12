@@ -34,6 +34,10 @@ const Login = () => {
       });
   };
 
+  const handleForgetPass = () => {
+    console.log("get me email address");
+  };
+
   return (
     <div>
       <div className="hero bg-base-200 min-h-screen">
@@ -67,7 +71,9 @@ const Login = () => {
                   placeholder="Password"
                 />
                 <div className="flex justify-between gap-32">
-                  <a className="link link-hover">Forgot password?</a>
+                  <label onClick={handleForgetPass} className="link link-hover">
+                    Forgot password?
+                  </label>
                   <p>
                     <Link to="/signup" className="link link-hover">
                       Create an account
