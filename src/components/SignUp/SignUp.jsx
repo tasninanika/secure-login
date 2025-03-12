@@ -18,6 +18,14 @@ const SignUp = () => {
 
     if (password.length < 6) {
       setError("Password should be 6 characters");
+      return;
+    }
+
+    const regex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+    if (!regex.test(password)) {
+      setError("At least one uppercase, one lower case, one special character");
     }
 
     // create user with email and pass
