@@ -66,7 +66,10 @@ const SignUp = () => {
                 placeholder="Password"
                 required
               />
-              <button className="absolute bottom-3.5 right-3 flex items-center">
+              <button
+                onClick={() => setShowPass(!showPass)}
+                className="absolute bottom-3.5 right-3 flex items-center"
+              >
                 <FaEye />
               </button>
             </div>
