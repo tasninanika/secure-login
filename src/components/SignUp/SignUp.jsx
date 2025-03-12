@@ -22,6 +22,11 @@ const SignUp = () => {
     setError("");
     setSuccess(false);
 
+    if (!terms) {
+      setError("Please accept our terms and conditions");
+      return;
+    }
+
     if (password.length < 6) {
       setError("Password should be 6 characters");
       return;
