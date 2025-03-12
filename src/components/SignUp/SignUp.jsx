@@ -3,6 +3,7 @@ import { FaEyeSlash } from "react-icons/fa";
 import {
   createUserWithEmailAndPassword,
   sendEmailVerification,
+  updateProfile,
 } from "firebase/auth";
 import React, { useState } from "react";
 import { auth } from "../../firebase.init";
@@ -53,8 +54,20 @@ const SignUp = () => {
 
         //   send verification email
         sendEmailVerification(auth.currentUser).then(() => {
-          console.log("verification email send");
+          console.log("verification email sent");
         });
+
+        // update profile name and photo
+        const profile = {
+          displayName: name,
+          photoURL: photo,
+        };
+
+        updateProfile(auth.currentUser, profile)
+          .then(() => {
+            console.log("user profile updated");
+          })
+          .catch((error) => console.log("user profile update error"));
       })
 
       .catch((error) => {
