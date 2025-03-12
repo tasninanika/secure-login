@@ -36,7 +36,8 @@ const Login = () => {
   };
 
   const handleForgetPass = () => {
-    console.log("get me email address");
+    console.log("get me email address", emailRef.current.value);
+    const email = emailRef.current.value;
   };
 
   return (
