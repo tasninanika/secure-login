@@ -67,6 +67,22 @@ const SignUp = () => {
         <h2 className="text-3xl text-center font-semibold">Sign Up</h2>
         <form onSubmit={handleSignUp}>
           <fieldset className="fieldset">
+            <label className="fieldset-label">Name</label>
+            <input
+              type="text"
+              className="input"
+              name="text"
+              placeholder="Write your name"
+              required
+            />
+            <label className="fieldset-label">Photo URL</label>
+            <input
+              type="text"
+              className="input"
+              name="photo"
+              placeholder="url"
+              required
+            />
             <label className="fieldset-label">Email</label>
             <input
               type="email"
