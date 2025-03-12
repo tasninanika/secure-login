@@ -69,6 +69,9 @@ const Login = () => {
           </form>
           {success && <p className="text-green-600">User Login Successful.</p>}
           {loginError && <p className="text-red-500">{loginError}</p>}
+          <p>
+            New to this website please <Link to="/signup">Sign Up</Link>
+          </p>
         </div>
       </div>
     </div>
