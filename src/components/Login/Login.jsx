@@ -1,6 +1,10 @@
 import React from "react";
 
 const Login = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div>
       <div className="hero bg-base-200 min-h-screen">
