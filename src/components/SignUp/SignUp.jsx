@@ -13,8 +13,10 @@ const SignUp = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
+    const terms = e.target.terms.checked;
+
     console.log(email);
-    console.log(password);
+    console.log(password, terms);
 
     // reset error and status
     setError("");
@@ -76,7 +78,12 @@ const SignUp = () => {
             </div>
             <fieldset className="fieldset w-64">
               <label className="fieldset-label">
-                <input type="checkbox" defaultChecked className="checkbox" />
+                <input
+                  type="checkbox"
+                  name="terms"
+                  defaultChecked
+                  className="checkbox"
+                />
                 Accepts Our Terms & Conditions
               </label>
             </fieldset>
