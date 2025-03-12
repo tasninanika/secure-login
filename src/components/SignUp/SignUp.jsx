@@ -15,12 +15,14 @@ const SignUp = () => {
 
   const handleSignUp = (e) => {
     e.preventDefault();
+    const name = e.target.name.value;
+    const photo = e.target.photo.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
     const terms = e.target.terms.checked;
 
     console.log(email);
-    console.log(password, terms);
+    console.log(password, terms, photo, name);
 
     // reset error and status
     setError("");
