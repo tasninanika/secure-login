@@ -1,3 +1,4 @@
+import { FaEye } from "react-icons/fa";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import { auth } from "../../firebase.init";
@@ -54,14 +55,20 @@ const SignUp = () => {
               placeholder="Email"
               required
             />
-            <label className="fieldset-label">Password</label>
-            <input
-              type="password"
-              className="input"
-              name="password"
-              placeholder="Password"
-              required
-            />
+            <div className="relative">
+              <label className="fieldset-label">Password</label>
+              <input
+                type="password"
+                className="input w-full pr-10"
+                name="password"
+                placeholder="Password"
+                required
+              />
+              <button className="absolute bottom-3.5 right-3 flex items-center">
+                <FaEye />
+              </button>
+            </div>
+
             <button className="btn btn-neutral mt-4">Signup</button>
           </fieldset>
         </form>
