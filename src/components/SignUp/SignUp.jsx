@@ -1,8 +1,9 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import React from "react";
+import React, { useState } from "react";
 import { auth } from "../../firebase.init";
 
 const SignUp = () => {
+  const [errorMessage, steError] = useState("");
   const handleSignUp = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -17,6 +18,7 @@ const SignUp = () => {
       })
       .catch((error) => {
         console.log("Error", error);
+        steError(errorMessage.message);
       });
   };
   return (
@@ -44,6 +46,7 @@ const SignUp = () => {
             <button className="btn btn-neutral mt-4">Signup</button>
           </fieldset>
         </form>
+        {errorMessage && <p className="text-red-600">{errorMessage}</p>}
       </div>
     </div>
   );
