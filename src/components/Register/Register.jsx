@@ -1,11 +1,21 @@
 import React from "react";
 
 const Register = () => {
+  const handleRegister = (event) => {
+    event.preventDefault();
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    console.log(email, password);
+  };
+
   return (
     <div className="max-w-lg mx-auto text-center">
       <h2 className="text-4xl my-8">Register</h2>
-      <form className="flex flex-col justify-center items-center">
-        <label className="input validator my-6">
+      <form
+        onSubmit={handleRegister}
+        className="flex flex-col justify-center items-center"
+      >
+        <label className="input validator">
           <svg
             className="h-[1em] opacity-50"
             xmlns="http://www.w3.org/2000/svg"
@@ -22,10 +32,15 @@ const Register = () => {
               <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
             </g>
           </svg>
-          <input type="email" placeholder="mail@site.com" required />
+          <input
+            type="email"
+            name="email"
+            placeholder="mail@site.com"
+            required
+          />
         </label>
         <div className="validator-hint hidden">Enter valid email address</div>
-        <label className="input validator">
+        <label className="input validator mt-6">
           <svg
             className="h-[1em] opacity-50"
             xmlns="http://www.w3.org/2000/svg"
@@ -44,6 +59,7 @@ const Register = () => {
           </svg>
           <input
             type="password"
+            name="password"
             required
             placeholder="Password"
             minlength="8"
