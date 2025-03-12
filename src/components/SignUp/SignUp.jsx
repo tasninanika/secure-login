@@ -3,6 +3,10 @@ import React from "react";
 const SignUp = () => {
   const handleSignUp = (e) => {
     e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(email);
+    console.log(password);
   };
   return (
     <div className="card bg-base-100 mx-auto w-full max-w-sm shrink-0 shadow-2xl mt-20">
@@ -14,6 +18,7 @@ const SignUp = () => {
             <input
               type="email"
               className="input"
+              name="email"
               placeholder="Email"
               required
             />
@@ -21,6 +26,7 @@ const SignUp = () => {
             <input
               type="password"
               className="input"
+              name="password"
               placeholder="Password"
               required
             />
