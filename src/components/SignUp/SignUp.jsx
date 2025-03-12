@@ -71,9 +71,15 @@ const SignUp = () => {
                 onClick={() => setShowPass(!showPass)}
                 className="absolute bottom-3.5 right-3 flex items-center"
               >
-                {showPass ? <FaEye /> : <FaEyeSlash />}
+                {showPass ? <FaEyeSlash /> : <FaEye />}
               </button>
             </div>
+            <fieldset className="fieldset w-64">
+              <label className="fieldset-label">
+                <input type="checkbox" defaultChecked className="checkbox" />
+                Accepts Our Terms & Conditions
+              </label>
+            </fieldset>
 
             <button className="btn btn-neutral mt-4">Signup</button>
           </fieldset>
