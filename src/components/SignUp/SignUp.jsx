@@ -14,6 +14,10 @@ const SignUp = () => {
     // reset error and status
     setError("");
 
+    if (password.length < 6) {
+      setError("Password should be 6 characters");
+    }
+
     // create user with email and pass
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
@@ -21,7 +25,7 @@ const SignUp = () => {
       })
       .catch((error) => {
         console.log("Error", error);
-        setError(error.message);
+        // setError(error.message);
       });
   };
   return (
