@@ -1,4 +1,5 @@
 import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import { auth } from "../../firebase.init";
@@ -70,7 +71,7 @@ const SignUp = () => {
                 onClick={() => setShowPass(!showPass)}
                 className="absolute bottom-3.5 right-3 flex items-center"
               >
-                <FaEye />
+                {showPass ? <FaEye /> : <FaEyeSlash />}
               </button>
             </div>
 
