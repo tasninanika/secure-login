@@ -1,18 +1,24 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
-import React from "react";
+import React, { useState } from "react";
 import { auth } from "../../firebase.init";
 
 const Login = () => {
+  const [success, setSuccess] = useState(false);
+
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(email, password);
 
+    // reset status
+    setSuccess(false);
+
     // login user
     signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
         console.log(result.user);
+        setSuccess(true);
       })
       .catch((error) => {
         console.log("Error", error.message);
