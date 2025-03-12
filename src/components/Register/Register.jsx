@@ -60,7 +60,7 @@ const Register = () => {
           <br />
           At least one uppercase letter
         </p>
-        <button type="submit" className="btn w-80 my-6">
+        <button type="submit" className="btn btn-active btn-accent w-80 my-6">
           Button
         </button>
       </form>
