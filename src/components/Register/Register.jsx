@@ -2,9 +2,9 @@ import React from "react";
 
 const Register = () => {
   return (
-    <div className="max-w-lg mx-auto">
+    <div className="max-w-lg mx-auto text-center">
       <h2 className="text-4xl my-8">Register</h2>
-      <form className="flex flex-col">
+      <form className="flex flex-col justify-center items-center">
         <label className="input validator my-6">
           <svg
             className="h-[1em] opacity-50"
