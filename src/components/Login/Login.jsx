@@ -8,16 +8,16 @@ const Login = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(email, password);
-  };
 
-  // login user
-  signInWithEmailAndPassword(auth, email, password)
-    .then((result) => {
-      console.log(result.user);
-    })
-    .catch((error) => {
-      console.log("Error", error.message);
-    });
+    // login user
+    signInWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log("Error", error.message);
+      });
+  };
 
   return (
     <div>
