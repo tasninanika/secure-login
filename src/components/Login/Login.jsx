@@ -17,7 +17,10 @@ const Login = () => {
               et a id nisi.
             </p>
           </div>
-          <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+          <form
+            onClick={handleLogin}
+            className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+          >
             <div className="card-body">
               <fieldset className="fieldset">
                 <label className="fieldset-label">Email</label>
@@ -34,7 +37,7 @@ const Login = () => {
                 <button className="btn btn-neutral mt-4">Login</button>
               </fieldset>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
