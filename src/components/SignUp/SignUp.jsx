@@ -60,7 +60,7 @@ const SignUp = () => {
             <div className="relative">
               <label className="fieldset-label">Password</label>
               <input
-                type="password"
+                type={showPass ? "text" : "password"}
                 className="input w-full pr-10"
                 name="password"
                 placeholder="Password"
