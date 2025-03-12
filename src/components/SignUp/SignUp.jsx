@@ -67,7 +67,7 @@ const SignUp = () => {
           .then(() => {
             console.log("user profile updated");
           })
-          .catch((error) => console.log("user profile update error"));
+          .catch(() => console.log("user profile update error"));
       })
 
       .catch((error) => {
