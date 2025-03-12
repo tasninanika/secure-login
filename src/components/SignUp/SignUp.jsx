@@ -18,7 +18,7 @@ const SignUp = () => {
       })
       .catch((error) => {
         console.log("Error", error);
-        steError(errorMessage.message);
+        steError(error.message);
       });
   };
   return (
