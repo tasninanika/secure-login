@@ -61,18 +61,21 @@ const Login = () => {
                   className="input"
                   placeholder="Password"
                 />
-                <div>
+                <div className="flex justify-between gap-32">
                   <a className="link link-hover">Forgot password?</a>
+                  <p>
+                    <Link to="/signup" className="link link-hover">
+                      Create an account
+                    </Link>
+                  </p>
                 </div>
+
                 <button className="btn btn-neutral mt-4">Login</button>
               </fieldset>
             </div>
           </form>
           {success && <p className="text-green-600">User Login Successful.</p>}
           {loginError && <p className="text-red-500">{loginError}</p>}
-          <p>
-            New to this website please <Link to="/signup">Sign Up</Link>
-          </p>
         </div>
       </div>
     </div>
