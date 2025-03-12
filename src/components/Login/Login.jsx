@@ -1,4 +1,6 @@
+import { signInWithEmailAndPassword } from "firebase/auth";
 import React from "react";
+import { auth } from "../../firebase.init";
 
 const Login = () => {
   const handleLogin = (e) => {
@@ -7,6 +9,15 @@ const Login = () => {
     const password = e.target.password.value;
     console.log(email, password);
   };
+
+  // login user
+  signInWithEmailAndPassword(auth, email, password)
+    .then((result) => {
+      console.log(result.user);
+    })
+    .catch((error) => {
+      console.log("Error", error.message);
+    });
 
   return (
     <div>
@@ -21,7 +32,7 @@ const Login = () => {
             </p>
           </div>
           <form
-            onClick={handleLogin}
+            onSubmit={handleLogin}
             className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
           >
             <div className="card-body">
