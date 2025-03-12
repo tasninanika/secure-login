@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { auth } from "../../firebase.init";
 
 const SignUp = () => {
-  const [errorMessage, steError] = useState("");
+  const [errorMessage, setError] = useState("");
   const handleSignUp = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -12,7 +12,7 @@ const SignUp = () => {
     console.log(password);
 
     // reset error and status
-    steError("");
+    setError("");
 
     // create user with email and pass
     createUserWithEmailAndPassword(auth, email, password)
@@ -21,7 +21,7 @@ const SignUp = () => {
       })
       .catch((error) => {
         console.log("Error", error);
-        steError(error.message);
+        setError(error.message);
       });
   };
   return (
